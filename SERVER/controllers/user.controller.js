@@ -3,6 +3,7 @@ const passport =  require('passport');
 const  _ = require('lodash');
 const User = mongoose.model('User');
 
+
 module.exports.register = (req,res,next)=>{
     console.log('inside register function');
 

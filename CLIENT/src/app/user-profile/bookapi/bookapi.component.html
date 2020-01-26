@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>search your books</h1>
+    <form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)">
+        <div class="form-group">
+            <input type="text" class="form-control mt-10" placeholder="search for books" autocomplete="off"/>
+        </div>
+            <button type="submit" class="btn btn-danger"> Search</button>
+    </form>
+</div>
+
+
+<table>
+
+<tr *ngFor ="let com of listbooks">
+    <td>{{com.id}}</td>
+    <td>{{com.email}}</td>
+    <td>{{com.name}}</td>
+</tr>
+
+</table>

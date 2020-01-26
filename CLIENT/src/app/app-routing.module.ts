@@ -4,6 +4,7 @@ import { UserComponent } from './user/user.component';
 import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import {BookapiComponent} from './user-profile/bookapi/bookapi.component';
 import {AuthGuard} from './auth/auth.guard';
 
 
@@ -20,8 +21,10 @@ const routes: Routes = [
     children:[{path:'',component:SignInComponent }]
     },
   {
-    path:'userprofile',component:UserProfileComponent,canActivate:[AuthGuard]
+    path:'userprofile',component:UserProfileComponent,canActivate:[AuthGuard],
+    children:[{path:'',component:BookapiComponent }]
   },
+ 
   {
     path:'',
     redirectTo:'login',
